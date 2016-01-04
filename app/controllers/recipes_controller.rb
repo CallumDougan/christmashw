@@ -1,12 +1,11 @@
-class RecipeController < ApplicationController
-  class CountriesController < ApplicationController
-
-    def index
-      @recipies = Recipe.all
-    end
+class RecipesController < ApplicationController
 
     def new
       @recipe = Recipe.new
+    end
+
+    def index
+      @recipes = Recipe.all
     end
 
     def show
@@ -19,7 +18,7 @@ class RecipeController < ApplicationController
 
     def update
       recipe_finder.update(recipe_params)
-      redirect_to(countries_path)
+      redirect_to(recipes_path)
     end
 
     def create
@@ -29,17 +28,16 @@ class RecipeController < ApplicationController
 
     def delete
       recipe_finder.destroy
-      redirect_to(countries_path)
+      redirect_to(recipes_path)
     end
 
     private
-    # def recipe_params
+    def recipe_params
     #   params.require(:recipe).permit(:name, :flag, :size, :population, :language, :travel_advice)
-    # end
+    end
 
     def recipe_finder
       @recipe = Recipe.find(params[:id])
     end
 
-  end
 end
