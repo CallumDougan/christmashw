@@ -53,6 +53,7 @@ button:hover{
 div {
   clear: both;
   margin: 20px;
+  display: inline-block;
 }
 
 textarea {
@@ -60,41 +61,13 @@ textarea {
   min-height: 100px;
 }
 
-nav {
-  background-color: rgb(38,45,66);
-  height: 65px;
-  line-height: 65px;
+label{
+    display: inline-block;
+    float: center;
+    clear: left;
+    width: 100px;
+    text-align: right;
 }
-nav ul {
-  padding-left: 0px;
-  margin: 0;
-  list-style-type: none;
+input {
+  display: inline-block;
 }
-
-nav ul li {
-  display: inline;
-  font-weight: 900;
-  margin-right: 20px;
-}
-
-nav ul li a {
-  color: white;
-  font-size: 12px;
-  text-decoration: none;
-}
-
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */

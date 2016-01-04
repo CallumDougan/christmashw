@@ -33,7 +33,7 @@ class RecipesController < ApplicationController
 
     private
     def recipe_params
-    #   params.require(:recipe).permit(:name, :flag, :size, :population, :language, :travel_advice)
+      params.require(:recipe).permit(:name, :description)
     end
 
     def recipe_finder

@@ -1,0 +1,6 @@
+<% @recipes.each do |recipe| %>
+  <%= link_to("Show #{recipe.name}", recipes_path(recipe)) %>
+  <%= link_to('Edit recipe', edit_recipes_path(recipe)) %>
+  <br>
+<% end %>
+<p><a href='recipes#new'>Add new recipe</a></p>
